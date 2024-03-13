@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Button</title>
+</head>
+
+<body>
+
+    <h1 id="Heading">Заголовок</h1>
+    <button id="Button">Видалити/Відновити</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const Heading = document.getElementById("Heading");
+            const Button = document.getElementById("Button");
+
+            Button.addEventListener("click", function () {
+                if (Heading.style.display === "none") {
+                    // відновлення 
+                    Heading.style.display = "block";
+                    Button.textContent = "Видалити";
+                } else {
+                    // видалення 
+                    Heading.style.display = "none";
+                    Button.textContent = "Відновити";
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
